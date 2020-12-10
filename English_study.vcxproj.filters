@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="소스.c">
+    <ClCompile Include="2학기문자재배열.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
