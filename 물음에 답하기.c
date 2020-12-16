@@ -6,7 +6,7 @@
 
 char question[12][80] = { "When can i a copy?", "What is the best way to go to the food store?","Why are you late?","It's cold isn't it?","Can i fill out this application?","What causing the noise upstairs?","Will you order supplies tommorow?","My laptop won't start?","I'll send you a price list?","How long have you worked at our company?","We have a meeting at two","Escuse me, i'm looking for a book colled communication by Rachel Evans?" };
 char r_answer[12][80] = { "On the second floor","Take highway 52","I missed the bus","Yes, you should wear swearter","Sure, no problem","The neighbors are moving the furniture","I did it yesterday","Maybe the battery's out","That'll be great,thank you", "For five years","Realy? I didn't know that","I'm sorry, we don't have that book, I'll order it for you" };
-char answer[71], storage[71];
+char answer[71] = "", storage[71];
 
 
 int main_b() {
@@ -24,7 +24,8 @@ int main_b() {
 		strcpy(r_answer[randdom], storage); // 질문과 같은 위치에 답 위치 변경
 
 		printf("%s ", question[i]);
-		gets(answer); // 엔터를 제외하고 모든 문자 입력
+	    fgets(answer, 71, stdin); // 엔터를 제외하고 모든 문자 입력
+		answer[strlen(answer) - 1] = 'w0'; // 뛰어쓰기  제거
 		printf("%s \n", r_answer[i]);
 
 
